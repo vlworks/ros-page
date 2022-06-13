@@ -1,0 +1,145 @@
+@import "vendor/reset.css";
+@import "global/fonts";
+@import "global/variables";
+
+/** GLOBAL params */
+html, body {
+  height: 100%;
+  max-height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $defaultFont, sans-serif;
+  color: $colorDefaultBlack;
+}
+
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/** /GLOBAL params */
+
+/** Header components */
+.header {
+  box-shadow: 0px 1px 0px #F5F5F5;
+  &-wrapper {
+    height: 90px;
+    padding: 0 100px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &-nav {
+    margin-left: 347px;
+    height: 100%;
+  }
+
+  &-options {
+    margin-left: auto;
+  }
+}
+
+.menu {
+  &-list {
+    height: 100%;
+    display: flex;
+    grid-gap: 40px;
+  }
+
+  &-item {
+
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      & .submenu-icon {
+        transform: rotate(180deg);
+
+        transition: .3s;
+      }
+      & .submenu-list {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+
+        transition: all .3s;
+      }
+    }
+  }
+
+  &-link {
+    font-size: 14px;
+    line-height: 90px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.09em;
+
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.options {
+  &-list {
+    display: flex;
+    grid-gap: 21px;
+  }
+}
+
+.submenu {
+  position: relative;
+  &-list {
+    position: absolute;
+    top: 53px;
+    left: -150px;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    width: 262px;
+    padding: 40px;
+
+    background-color: #ffffff;
+    border-top: 1px solid #EEEFF4;
+
+    transition: .3s;
+  }
+
+  &-item {
+    margin-bottom: 18px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &-link {
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+  &-icon {
+    margin-left: 15px;
+    transition: .2s;
+  }
+}
+/** /Header components */
+
+/** Slider components */
+.slider {
+  height: 100%;
+  background-color: #EEEFF4;
+}
+/** /Slider components */
